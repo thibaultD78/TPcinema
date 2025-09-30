@@ -1,9 +1,10 @@
 <?php
 
-Class Film{
+Class Film extends Realisateur{
     private int $idFilm;
     private string $nomFilm;
     private int $nbEntrees;
+    private Realisateur $real;
 
     public function __construct(int $idFilm,string $nomFilm,int $nbEntrees){
         $this->idFilm=$idFilm;
