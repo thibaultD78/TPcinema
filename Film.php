@@ -5,28 +5,28 @@ Class Film{
     private string $nomFilm;
     private int $nbEntrees;
 
-    public function __construct(int $name,string $nomFilm,int $nbEntrees){
-        $this->name=$name;
+    public function __construct(int $idFilm,string $nomFilm,int $nbEntrees){
+        $this->idFilm=$idFilm;
         $this->nomFilm=$nomFilm;
         $this->nbEntrees=$nbEntrees;
     }
 
-    public function getIdFilm(){
-        return $this->name;
+    public function getIdFilm():int{
+        return $this->idFilm;
     }
-    public function getnomFilm(){
+    public function getnomFilm():string{
         return $this->nomFilm;
     }
-    public function getnbEntrees(){
+    public function getnbEntrees():int{
         return $this->nbEntrees;
     }
-    public function setIdFilm(int $idFilm){
+    public function setIdFilm(int $idFilm):void{
         $this->idFilm=$idFilm;
     }
-        public function setNomFilm(int $nomFilm){
+        public function setNomFilm(int $nomFilm):void{
         $this->nomFilm=$nomFilm;
     }
-        public function setNbEntrees(int $nbEntrees){
+        public function setNbEntrees(int $nbEntrees):void{
         $this->nbEntrees=$nbEntrees;
     }
 }
