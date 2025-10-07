@@ -56,7 +56,7 @@ for ($film=0;$film<$nbFilm;$film++){
     echo "Infos sur le film ==>\n".$listfilm[$film]->getIdFilm()." - ".$listfilm[$film]->getNomFilm()." - ".$listfilm[$film]->getNbEntrees()." - ".$listfilm[$film]->getReal()->getnomReal()." - ".$listfilm[$film]->getReal()->getprenomReal()."\n";
     $nbActeur = count($listfilm[$film]->getlistActeur());
     for($acteur=0;$acteur<$nbActeur;$acteur++){
-        echo $listfilm[$film]->getlistActeur()[$acteur]->getPrenom()." - ".$listfilm[$film]->getlistActeur()[$acteur]->getnom()." - ";
+        echo $listfilm[$film]->getlistActeur()[$acteur]->getNom()." - ".$listfilm[$film]->getlistActeur()[$acteur]->getPrenom()." - ";
         if($listfilm[$film]->getlistActeur()[$acteur]->getaUnCesar()==true){
             echo "true \n ";
         }
