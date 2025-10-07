@@ -7,12 +7,12 @@ Class Film {
     private Realisateur $real;
     private $listActeur = array();
 
-    public function __construct(int $idFilm,string $nomFilm,int $nbEntrees,Realisateur $real, array $listActeur){
+    public function __construct(int $idFilm,string $nomFilm,int $nbEntrees,Realisateur $real/*, array $listActeur*/){
         $this->idFilm=$idFilm;
         $this->nomFilm=$nomFilm;
         $this->nbEntrees=$nbEntrees;
         $this->real=$real ;
-        $this->listActeur = $listActeur;
+        /*$this->listActeur = $listActeur*/;
     }
 
     public function getlistActeur():array{
@@ -41,5 +41,8 @@ Class Film {
     }
     public function setNbEntrees(int $nbEntrees):void{
         $this->nbEntrees=$nbEntrees;
+    }
+    public function addActeur(Acteur $acteur):void{
+        $this->listActeur[]=$acteur;
     }
 }
